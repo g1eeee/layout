@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 레이아웃</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body id="top">
+  <header>
+    <div>
+      <h1>
+        <a href="#">
+          <img src="./img/panstar.png" alt="panstar logo">
+        </a>
+      </h1>
+      <nav class="pc_menu">
+        <ul>
+          <li><a href="#">팬스타소개</a></li>
+          <li><a href="#">사업분야</a></li>
+          <li><a href="#">고객지원</a></li>
+          <li><a href="#">미디어센터</a></li>
+          <li><a href="#">인재채용</a></li>
+        </ul>
+      </nav><!-- .pc_menu end -->
+
+      <i class="mobile xi-bars"><span>메뉴보기</span></i>
+      <!-- 아이콘 영역, 빈태그로 두면 접근성에 어긋나 위 방식처럼 작성해줘야함 -->
+      <!-- 이 때 span태그 대신 p넣으면 안됨, i는 인라인 요소이고 p는 블럭요소이기 때문! -->
+
+      <nav class="mobile_menu">
+        <ul>
+          <li><a href="#">팬스타소개</a></li>
+          <li><a href="#">사업분야</a></li>
+          <li><a href="#">고객지원</a></li>
+          <li><a href="#">미디어센터</a></li>
+          <li><a href="#">인재채용</a></li>
+        </ul>
+      </nav><!-- .mobile_menu end -->
+    </div>
+  </header> <!-- header end -->
+
+  <section class="main_visual">
+    <img src="./img/city05.jpg" alt="city">
+    <div>
+      <h2>OVER THE NETWORK</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corrupti doloribus et ullam,<br>
+        id magnam cum accusamus praesentium consequatur, laboriosam temporibus dolore ipsa! </p>
+    </div>
+  </section><!-- .main_vusual end -->
+
+  <section class="cont01">
+    <div class="title">
+      <h3>section title</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br />Unde eius pariatur aperiam
+      </p>
+    </div><!-- .title end -->
+
+    <div class="list">
+      <div>
+        <img src="./img/city01.jpg" alt="city">
+        <a href="#">
+          <h4>고속화물페리</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolor. Fugiat ullam sed officia. Ea
+            cupiditate ipsam sed exercitationem, animi eum doloremque tempora eligendi quidem iusto eius quae nulla et.
+          </p>
+        </a>
+      </div>
+      <div>
+        <img src="./img/city02.jpg" alt="city">
+        <a href="#">
+          <h4>크루즈 여객</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolor. Fugiat ullam sed officia. Ea
+            cupiditate ipsam sed exercitationem, animi eum doloremque tempora eligendi quidem iusto eius quae nulla et.
+          </p>
+        </a>
+      </div>
+      <div>
+        <img src="./img/city03.jpg" alt="city">
+        <a href="#">
+          <h4>국제특송</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolor. Fugiat ullam sed officia. Ea
+            cupiditate ipsam sed exercitationem, animi eum doloremque tempora eligendi quidem iusto eius quae nulla et.
+          </p>
+        </a>
+      </div>
+      <div>
+        <img src="./img/city04.jpg" alt="city">
+        <a href="#">
+          <h4>자동차정비기기</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolor. Fugiat ullam sed officia. Ea
+            cupiditate ipsam sed exercitationem, animi eum doloremque tempora eligendi quidem iusto eius quae nulla et.
+          </p>
+        </a>
+      </div>
+    </div><!-- .list end -->
+  </section><!-- .cont01 end -->
+  <footer id="bottom">
+    copyright 2022 서지원. All right reserved.
+  </footer>
+  <aside>
+    <ul>
+      <li><a href="#top">위로</a></li>
+      <li><a href="#bottom">밑으로</a></li>
+    </ul>
+  </aside>
+</body>
+
+</html>

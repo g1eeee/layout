@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #333;
+}
+
+/* 모바일 */
+.mobile {
+    display: none;
+}
+
+.mobile_menu {
+    display: none;
+}
+
+/* header */
+header{
+    width : 100%;
+    height : 100px;
+    background-color: rgba(31, 31, 31, 0.253);
+    position : absolute;
+    /* 브라우저를 중심으로 움직임!
+    position 값은 부모 자식관계에만 적용가능!!! */
+    top : 0;
+    left : 0;
+    z-index: 1;
+
+}
+header div{
+    max-width : 1440px;
+    width : 95%;
+    height : 100%;
+    /*  height 값은 상속이 안되기에 이 값 줘야 안에 있는 요소들이 중앙에 나열될 수 있음 */
+    margin : 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header div h1 {
+    line-height: 0;
+    /* 로고 이미지 아래에 작은 여백있는거 없애줄때 */
+}
+
+header div h1 a img{
+    width : 200px;
+}
+header .pc_menu ul{
+    display: flex;
+}
+header .pc_menu ul li a{
+    padding : 0 20px;
+    color : #fff;
+}
+
+/* .main_visual */
+.main_visual{
+    height : 100vh;
+    position : relative;
+}
+.main_visual img{
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+}
+.main_visual div{
+    max-width : 1440px;
+    width : 95%;
+    /* background-color: aqua; */
+    position : absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color : #fff;
+    /* mix-blend-mode : soft-light;
+    블렌드 모드 주는 속성 */
+}
+.main_visual div h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.main_visual div p{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+/* .cont 01 */
+.cont01{
+    padding : 150px 0;
+}
+.cont01 .title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.cont01 .title h3{
+    font-size: 40px;
+}
+
+.cont01 .list{
+    max-width: 1440px;
+    width : 95%;
+    margin : 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 공간 부족할 때 밑으로 나열 */
+}
+.cont01 .list div{
+    width : 24%;
+    height : 420px;
+    background-color: aquamarine;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.cont01 .list div img{
+    width : 100%;
+    height : 50%;
+    object-fit: cover;
+    transform: scale(3);
+    mix-blend-mode:multiply;
+    transition: 1s;   
+}
+.cont01 .list div:hover img{
+    transform:scale(1);
+    mix-blend-mode: normal;
+}
+.cont01 .list div a{
+    display: block;
+    /* a값은 인라인 요소로 너비, 높이를 가질 수 없기에  */
+    width : 100%;
+    height : 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.cont01 .list div a h4{
+    width : 100%;
+    /* 글자영역만큼만 가지고 있는걸 부모영역 전체를 잡을 수 있도록 바꿔줌 */
+    font-size: 22px;
+    margin-bottom: 15px;
+    position: relative;
+    top : 0;
+    left : 0;
+    z-index: 1;
+    color : #fff;
+}
+.cont01 .list div:hover h4{
+    color : #000
+}
+.cont01 .list div a p{
+    display: none;
+}
+.cont01 .list div:hover p{
+    display: block;
+    margin-bottom: 10px;
+}
+/* footer */
+footer{
+    padding : 50px 0;
+    background-color: #333;
+    color : #fff;
+    text-align: center;
+}
+
+/* 반응형 */
+@media screen and (max-width : 1024px) {
+    .pc_menu{display: none;}
+    .xi-bars{display: block;
+    color : #fff;
+    font-size: 35px;
+}
+    .xi-bars span{
+        position: absolute;
+        left : -99999999px;
+    }
+    .cont01{
+        background-color: rgb(255, 247, 231);
+    }
+    .cont01 .list div{
+        width : 48%;
+        height : auto;
+        /* 기존에 있는 420px의 고정값을 자식이 가지는 영역만큼 자유롭게 지닐 수 있도록 설정 */
+        margin-bottom: 40px;
+        background-color: #fff;
+        /* 이 값을 줌으로써 블렌딩모드가 사라짐 */
+    }
+    .cont01 .list div img{
+        transform: scale(1);
+        height: 300px;
+    }
+    .cont01 .list div a{
+        height : auto;
+        padding : 20px;
+        box-sizing: border-box;
+        /* padding값을 포함하여 width 를 100%로 잡아줌 */
+    }
+    .cont01 .list div a p{
+        display: block;
+        margin-bottom : 10px;
+    }
+    .cont01 .list div a h4{
+        color : #333;
+    }
+}
+@media screen and (max-width : 640px) {
+    .main_visual div h2{
+        font-size: 32px;
+    }
+    .main_visual div p{
+        font-size: 16px;
+    }
+    .cont01{
+        padding : 80px 0;
+    }
+    .cont01 .list div{
+        width : 100%;
+    }
+}
+
+/* aside */
+aside{
+    position: fixed;
+    /* 브라우저를 중점으로 움직여줌 */
+    bottom : 70px;
+    right : 50px;
+}
+
+aside ul li{
+    width : 60px;
+    height : 60px;
+    background-color: rgb(255, 255, 255);
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 10px;
+    box-shadow: 2px 3px 10px rgba(100, 100, 100, 0.568);
+}
+aside ul li a{
+    display: block;
+    /* a태그가 글자 영역아닌 원형 전체 영역이 잡힐 수 있도록! */
+}
